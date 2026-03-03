@@ -9,3 +9,4 @@
 
 ## Bundle of container for boilerplate
 - go-gin-backend (container for setup backend with gin in golang)
+- container-template-c (container for setup c programme for dev)
