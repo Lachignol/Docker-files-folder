@@ -1,0 +1,7 @@
+services:
+  c-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: c-prod
+    tty: true

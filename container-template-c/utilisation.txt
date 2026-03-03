@@ -1,0 +1,9 @@
+# Construire l'image finale sans montage
+docker compose up -d --build
+
+# Voir les logs (si ton programme affiche quelque chose)
+docker logs -f iron-dome
+
+# Ou lancer en interactif
+docker compose run --rm iron-dome
+

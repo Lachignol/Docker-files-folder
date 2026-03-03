@@ -1,0 +1,15 @@
+# 1. Démarrer une fois
+docker compose -f docker-compose.dev.yml up -d --build
+
+# 2. Terminal séparé pour exécuter/compilation
+docker exec -it c-dev bash
+
+# 3. Sur ta machine : tu codes normalement
+nvim ./src/main.c          # Modifications instantanées !
+
+# 4. Dans le conteneur : tu compiles/exécutes
+gcc main.c -o monprog      # Voit tes changements
+                 ou
+make
+./monprog                  # Exécute immédiatement
+
