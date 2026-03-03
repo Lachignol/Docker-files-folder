@@ -2,8 +2,8 @@
 docker compose up -d --build
 
 # Voir les logs (si ton programme affiche quelque chose)
-docker logs -f iron-dome
+docker logs -f nom_prog
 
 # Ou lancer en interactif
-docker compose run --rm iron-dome
+docker compose run --rm nom_prog
 
