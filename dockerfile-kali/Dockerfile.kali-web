@@ -1,0 +1,30 @@
+FROM kalilinux/kali-rolling
+
+# Avoid interactive prompts during installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install web application testing tools
+RUN apt update && apt install -y --no-install-recommends \
+    nmap \
+    nikto \
+    sqlmap \
+    dirb \
+    gobuster \
+    wfuzz \
+    burpsuite \
+    zaproxy \
+    whatweb \
+    ffuf \
+    httpx-toolkit \
+    nuclei \
+    curl \
+    wget \
+    python3-pip \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create a working directory for output files
+WORKDIR /assessments
+
+# Default command drops into a shell
+CMD ["/bin/bash"]
